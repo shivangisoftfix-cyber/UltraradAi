@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@keyframes slide-left-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(8px);
+  }
+}
+.arrow-slide{
+    animation: slide-left-right 1s infinite;
+
+}
