@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Login = () => {
   return (
     <div className="flex   justify-center   min-h-screen px-4 bg-gray-300">
-      <div className="w-full  max-w-md bg-white shadow-lg  relative p-6   h-screen max-h-9/10 ">
+      <div className="w-full  max-w-md bg-white shadow-md  relative p-6   h-9/10 ">
 
       {/*Go back*/}
       <div className="top-0">

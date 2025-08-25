@@ -18,7 +18,7 @@ const Header = () => {
         {/* Nav Items */}
         <div className="  flex-1 flex items-center justify-center space-x-4">
 
-          <nav className=" bg-white-700 px-6 py-4 rounded-full border-2 border-gray-100 flex space-x-6">
+          <nav className=" bg-white-700 px-6 py-4 flex space-x-6 text-xl">
 
 
             <NavLink to="/"
@@ -60,7 +60,7 @@ const Header = () => {
         </div>
 
 
-        <div className="  bg-blue-900 px-6 py-2 border-2 rounded-full border-gray-300 flex justify-end  ">
+        <div className=" absolute right-3  bg-blue-900 px-6 py-2 border-2 rounded-full border-gray-300  ">
           
 
 
