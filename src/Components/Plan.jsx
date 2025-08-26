@@ -7,19 +7,17 @@ import { CiLock } from "react-icons/ci";
 
 const Plan = () => {
   return (
-    <section id="plans-show">
+    <section id="plans-show ">
       <div className="flex flex-col justify-center items-center px-5 py-10 bg-secondryColor min-h-screen">
         {/* Section Title */}
-        <h1 className="text-4xl font-bold text-white mb-2">Choose Your Plan</h1>
-        <h2 className="text-lg text-gray-300 mb-8">Unlock endless possibilities</h2>
+        <h1 className="text-4xl font-bold text-blue-900 mb-2">Choose Your Plan</h1>
+        <h2 className="text-lg text-blue-900 mb-8">Unlock endless possibilities</h2>
 
         {/* Free Plan Card */}
         <div className="max-w-5xl w-full">
           <div className="relative bg-blue-50 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-blue-500/30 hover:-translate-y-1">
             {/* Limited Time Offer Ribbon */}
-            <div className="absolute top-0 right-0 bg-secondryColor text-white text-sm font-bold px-4 py-1 transform rotate-45 translate-x-8 translate-y-6 w-48 text-center">
-              LIMITED TIME OFFER
-            </div>
+            
 
             <div className="p-10 grid md:grid-cols-2 gap-10">
               {/* Left Side (Plan Info) */}
@@ -105,10 +103,10 @@ const Plan = () => {
 
           {/* Premium CTA */}
           <div className="mt-8 text-center">
-            <h3 className="text-2xl font-semibold text-white mb-4">
+            <h3 className="text-2xl font-semibold text-blue-900 mb-4">
               Need more interpretations or features?
             </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+            <p className="text-blue-900 mb-6 max-w-2xl mx-auto">
               Sign up to unlock our full range of premium plans with advanced features and priority support.
             </p>
             <Link to="/login" className="py-3 px-8 bg-white text-blue-600 font-semibold rounded-lg

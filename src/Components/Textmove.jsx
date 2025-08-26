@@ -10,7 +10,7 @@ const Textmove = ({ text, textsize = "72px" }) => {
         {text}
         {/* Overlay text */}
         <span
-          className="absolute inset-0 text-red-600 overflow-hidden
+          className="absolute inset-0  overflow-hidden text-blue-600
           transition-all duration-500 ease-in-out  group-hover:w-full w-0"
         >
           {text}

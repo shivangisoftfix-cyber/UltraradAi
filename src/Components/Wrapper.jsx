@@ -1,16 +1,18 @@
-import React from 'react'
-import Header from './Header'
+import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const Wrapper = ({ children }) => {
-    return (
-        <>
-            <Header />
-            
-            {
-                children
-            }
-        </>
-    )
-}
+  return (
+    <>
+      <Header />
+      <div className="border-2 border-white">
 
-export default Wrapper
+      {children}
+      </div>
+      <Footer/>
+    </>
+  );
+};
+
+export default Wrapper;

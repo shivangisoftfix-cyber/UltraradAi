@@ -1,16 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link } from "react-router-dom"; 
 
-const End = () => {
+const Doctorh = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-stretch py-16 gap-8 px-6 md:px-20">
+    <section className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-stretch 
+     py-16 gap-8 px-6 md:px-20">
       {/* Left side image */}
       <div className="w-full md:w-1/2 flex flex-col">
         <div
           style={{ minHeight: "400px" }}
           className="relative flex-1 bg-gray-100 rounded-xl overflow-hidden min-h-[600px]"
         >
-          <img src="/_next/static/media/doctorCon.4276dde9.jpg"
+          <img src="https://ultraradai.com/_next/static/media/doctorCon.4276dde9.jpg"
             alt="Radiology Case Study"
             loading="lazy"
             decoding="async"
@@ -72,4 +73,4 @@ const End = () => {
   );
 };
 
-export default End;
+export default Doctorh;

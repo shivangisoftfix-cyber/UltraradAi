@@ -11,12 +11,13 @@ import Textmove from "./Textmove";
 import Box from "./Box";
 import Frequnce from "./Frequnce";
 import Latestar from "./Latestar";
-import End from "./End";
+import End from "./Doctorh";
+import Doctorh from "./Doctorh";
 
 function Home() {
   return (
     <div
-      className="space-y-24 h-[120vh] pt-44 w-full"
+      className="space-y-24 min-h-[120vh] pt-44 w-full"
       style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
     >
       {/* Hero Section */}
@@ -53,53 +54,56 @@ function Home() {
       </section>
 
       {/* Contact Box Section */}
-    <div className="flex flex-row relative items-center justify-center">
-  <div className="h-40 w-4/6 shadow-2xl rounded-xl px-20 bg-white dark:bg-gray-500 absolute -top-55">
-    <div className="flex justify-start items-center gap-10 relative py-8">
-      <div className="flex items-center gap-3">
-        <CiPhone className="w-12 h-12 bg-blue-500 text-white rounded-full p-2" />
-        <span>
-          <b>Hotline</b>
-          <br /> 123-456-7890
-        </span>
+      <div className="flex relative items-center justify-center">
+        <div
+          className="w-4/6 h-auto shadow-2xl rounded-xl px-6 md:px-20 bg-white
+   dark:bg-gray-500 relative  top-0 md:absolute md:-top-50 py-8"
+        >
+          <div className="flex flex-wrap justify-start items-center gap-10 py-8">
+            {/* Item 1 */}
+            <div className="flex items-center gap-3">
+              <CiPhone className="w-12 h-12 bg-blue-500 text-white rounded-full p-2" />
+              <span>
+                <b>Hotline</b> <br /> 123-456-7890
+              </span>
+            </div>
+
+            {/* Item 2 */}
+            <div className="flex items-center gap-3">
+              <MdOutlineMailOutline className="w-12 h-12 bg-blue-500 text-white rounded-full p-2" />
+              <span>
+                <b>Email</b>
+                <br />
+                Support@ultraradai.com
+              </span>
+            </div>
+
+            {/* Item 3 */}
+            <div className="flex items-center gap-3">
+              <BiShareAlt className="w-12 h-12 bg-blue-500 text-white rounded-full p-2" />
+              <span>
+                <b>Follow Us</b>
+                <br />
+                @ultraradai
+              </span>
+            </div>
+
+            <Link
+              to="/register"
+              className="bg-blue-500 px-6 py-3 rounded-full flex items-center text-white text-lg font-semibold shadow-md hover:bg-blue-600 transition"
+            >
+              Get Started{" "}
+              <AiOutlineArrowRight className="ml-2 text-xl arrow-slide" />
+            </Link>
+          </div>
+        </div>
       </div>
-
-      <div className="flex items-center gap-3">
-        <MdOutlineMailOutline className="w-12 h-12 bg-blue-500 text-white rounded-full p-2" />
-        <span>
-          <b>Email</b>
-          <br /> Support@ultraradai.com
-        </span>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <BiShareAlt className="w-12 h-12 bg-blue-500 text-white rounded-full p-2" />
-        <span>
-          <b>Follow Us</b>
-          <br /> @ultraradai
-        </span>
-      </div>
-
-      <Link
-        to="/register"
-        className="absolute right-3 bg-blue-500 px-6 py-3 rounded-full flex items-center text-white text-lg font-semibold shadow-md hover:bg-blue-600 transition"
-      >
-        Get Started
-        <AiOutlineArrowRight className="ml-2 text-xl" />
-      </Link>
-    </div>
-  </div>
-</div>
-
-
 
       {/* Marquee with Rotating + */}
-      <div className="w-full ">
+      <div className="w-full mt-10  md:mt-0 relative -top-10">
         <marquee className="w-full ">
           <Textmove text={"Diagonastic"} />
-          <span className="mx-4 inline-block animate-spin-slow text-6xl font-bold">
-            +
-          </span>
+          <span className="mx-4 inline-block  text-6xl font-bold">+</span>
           <Textmove text={"Radiologist"} />
           <span className="mx-4 inline-block animate-spin-slow text-6xl font-bold">
             +
@@ -109,13 +113,13 @@ function Home() {
       </div>
 
       {/* Other Sections */}
-      <div className="bg-blue-400 py-20">
+      <div className="bg-blue-200 py-20">
         <Box />
         <Climet />
         <Plan />
         <Frequnce />
         <Latestar />
-        <End/>
+        <Doctorh/>
       </div>
     </div>
   );

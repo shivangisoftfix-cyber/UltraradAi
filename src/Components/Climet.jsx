@@ -23,12 +23,18 @@ export default function Climet(){
   const [index, setIndex] = useState(0);
 
   const handlePrev = () => {
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
+  setIndex((prev) => {
+    if (prev === 0) return prev; // stop at first
+    return prev - 1;
+  });
+};
 
-  const handleNext = () => {
-    setIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+const handleNext = () => {
+  setIndex((prev) => {
+    if (prev === testimonials.length - 1) return prev; // stop at last
+    return prev + 1;
+  });
+};
 
   const { text, name, role, img } = testimonials[index];
 

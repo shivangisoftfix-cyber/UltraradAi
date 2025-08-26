@@ -29,7 +29,7 @@ const Frequnce = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-400">
+    <section className="py-20 ">
       <h2 className="text-2xl font-bold text-center mb-6">
         Frequently Asked Questions
       </h2>
