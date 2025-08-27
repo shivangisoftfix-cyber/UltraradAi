@@ -90,7 +90,8 @@ function Home() {
 
             <Link
               to="/register"
-              className="bg-blue-500 px-6 py-3 rounded-full flex items-center text-white text-lg font-semibold shadow-md hover:bg-blue-600 transition"
+              className="bg-blue-500 px-6 py-3 rounded-full flex items-center text-white text-lg 
+              font-semibold shadow-md hover:bg-blue-600 transition"
             >
               Get Started{" "}
               <AiOutlineArrowRight className="ml-2 text-xl arrow-slide" />

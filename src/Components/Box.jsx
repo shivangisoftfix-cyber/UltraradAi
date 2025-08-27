@@ -89,7 +89,7 @@ const Box = () => {
           />
 
           <div className="ml-0 md:ml-10">
-            <h1 className="text-4xl font-bold text-blue-500 mb-4">About Us</h1>
+            <h1 className="text-4xl font-bold text-blue-900 mb-4">About Us</h1>
            
             <p className="text-gray-600 max-w-md leading-relaxed">
               Ultrarad AI is a radiologist-built platform designed to revolutionize
@@ -100,7 +100,7 @@ const Box = () => {
               efficiency, and uncover insights that traditional methods often miss.
             </p>
           
-        <div className=" absolute  bg-blue-500 py-2 px-3  rounded-xl mt-10">
+        <div className=" absolute  bg-blue-900 py-2 px-3  rounded-xl mt-10">
             <Link to="/about" className="text-white font-bold flex items-center space-x-2">
               <span>Learn More</span>
                <AiOutlineArrowRight className="text-xl arrow-slide" />

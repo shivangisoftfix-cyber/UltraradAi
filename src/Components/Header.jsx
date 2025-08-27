@@ -100,8 +100,8 @@ const Header = () => {
           <NavLink
             to="/article"
             onClick={() => setMenuOpen(false)}
-            className="flex flex-col items-center gap-1"
-          >
+            className="flex flex-col items-center gap-1">
+          
             <AiOutlineFileText className="text-3xl text-blue-900" />
             <span className="text-blue-900 text-sm">News & Article</span>
           </NavLink>
