@@ -2,10 +2,13 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import logo from "../assets/images/ultra.png";
 
+// ✅ Correct imports for social media icons
+import { FaSquareFacebook, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="border-t-[#153a5b] border-t-2 w-full bg-gradient-to-br from-white to-maincolor
+    <footer className="border-t-[#153a5b] border-t-2 w-full bg-gradient-to-br from-blue-300 to-maincolor
      text-white pt-16 pb-8 px-6 md:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
@@ -34,7 +37,7 @@ const Footer = () => {
             <h2 className="text-lg text-gray-800 font-semibold mb-4 pb-2 border-b border-blue-600 inline-block">
               Quick Links
             </h2>
-            <ul className="space-y-3 list-disc list-inside text-gray-700">
+            <ul className="space-y-3 list-disc list-inside text-blue-900">
               {[
                 { to: "/", label: "Home" },
                 { to: "/about-us", label: "About Us" },
@@ -76,38 +79,38 @@ const Footer = () => {
             <div>
               <h3 className="text-gray-800 font-medium mb-3">Follow Us</h3>
               <div className="flex space-x-4">
-                
+
                 {/* Facebook */}
                 <a
                   href="https://www.facebook.com/share/1CytXY4A1z/"
-                  className="group bg-white hover:bg-secondryColor p-3 rounded-full transition-all duration-300 shadow-md flex items-center justify-center"
+                  className="bg-[#1877F2] hover:brightness-90 p-3 rounded-full transition-transform transform hover:scale-110 shadow-md flex items-center justify-center"
                   aria-label="Facebook"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                 {/* <FaSquareFacebook className="text-blue-700 text-xl group-hover:text-white" /> */}
+                  <FaSquareFacebook className="text-white text-xl" />
                 </a>
 
                 {/* Twitter (X) */}
                 <a
                   href="https://x.com/UltraradAI?s=09"
-                  className="group bg-white hover:bg-secondryColor p-3 rounded-full transition-all duration-300 shadow-md flex items-center justify-center"
+                  className="bg-black hover:brightness-90 p-3 rounded-full transition-transform transform hover:scale-110 shadow-md flex items-center justify-center"
                   aria-label="Twitter (X)"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                {/*  <FaXTwitter className="text-black text-xl group-hover:text-white" /> */}
+                  <FaXTwitter className="text-white text-xl" />
                 </a>
 
                 {/* Instagram */}
                 <a
                   href="https://www.instagram.com/ultraradai?igsh=MWt2Z2V6d2s2dGp5MQ=="
-                  className="group bg-white hover:bg-secondryColor p-3 rounded-full transition-all duration-300 shadow-md flex items-center justify-center"
+                  className="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:brightness-90 p-3 rounded-full transition-transform transform hover:scale-110 shadow-md flex items-center justify-center"
                   aria-label="Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                 {/* <FaInstagramSquare className="text-red-500 text-xl group-hover:text-white" /> */}
+                  <FaInstagram className="text-white text-xl" />
                 </a>
               </div>
             </div>

@@ -16,10 +16,17 @@ import Doctorh from "./Doctorh";
 
 function Home() {
   return (
-    <div
-      className="space-y-24 min-h-[120vh] pt-44 w-full"
-      style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }}
-    >
+    <div className="w-full">
+  {/* Background Section (shorter height) */}
+  <div
+    className="pt-50 pb-8"
+    style={{
+      backgroundImage: `url(${background})`,   // applies your background
+      backgroundSize: "cover",                 // fills width/height while keeping aspect
+      backgroundPosition: "top",               // aligns image at top
+      backgroundRepeat: "no-repeat",           // prevents tiling
+    }}
+  >
       {/* Hero Section */}
       <section className="flex flex-row justify-between px-6">
         {/* Left Text Section */}
@@ -54,10 +61,10 @@ function Home() {
       </section>
 
       {/* Contact Box Section */}
-      <div className="flex relative items-center justify-center">
+      <div className="flex relative items-center justify-center   ">
         <div
-          className="w-4/6 h-auto shadow-2xl rounded-xl px-6 md:px-20 bg-white
-   dark:bg-gray-500 relative  top-0 md:absolute md:-top-50 py-8"
+          className="w-4/6 h-auto shadow-md rounded-xl px-6 md:px-20 bg-white
+   dark:bg-gray-500 relative  top-0  md:absolute md:-top-50 py-8 "
         >
           <div className="flex flex-wrap justify-start items-center gap-10 py-8">
             {/* Item 1 */}
@@ -99,9 +106,11 @@ function Home() {
           </div>
         </div>
       </div>
+      </div>
+      
 
       {/* Marquee with Rotating + */}
-      <div className="w-full mt-10  md:mt-0 relative -top-10">
+      <div className="w-full mt-10  md:mt-0 relative -top-10  py-10">
         <marquee className="w-full ">
           <Textmove text={"Diagonastic"} />
           <span className="mx-4 inline-block  text-6xl font-bold">+</span>

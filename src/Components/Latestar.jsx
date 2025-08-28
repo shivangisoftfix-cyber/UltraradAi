@@ -33,18 +33,22 @@ const Text = [
 
 const Latestar = () => {
   return (
-    <section className="py-16 bg-blue-300 min-h-screen flex flex-col justify-between">
+    <section className="py-16 bg-white min-h-screen flex flex-col justify-between">
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-blue-700 text-center mb-12 underline-offset-0 decoration-blue-600">
-        Latest Article
-      </h1>
+     <h2 className="text-3xl md:text-4xl font-bold text-center text-[#153a5b] mb-16 relative 
+  after:content-[''] after:block after:w-20 after:h-1 
+  after:bg-gradient-to-r after:from-[#0857a0] after:to-[#153a5b] 
+  after:mx-auto after:mt-4">
+  Letest Article
+</h2>
+
 
       {/* Cards */}
       <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-3 gap-6 px-6">
         {Text.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-xl shadow hover:shadow-lg transition duration-300"
+            className="bg-white rounded-xl shadow hover:shadow-lg transition duration-300 leading-tight"
           >
             {/* Image */}
             <img
@@ -59,36 +63,34 @@ const Latestar = () => {
                 <span className="px-3 rounded-xl bg-blue-300">{item.category}</span>
                 <span className="text-gray-500">{item.date}</span>
               </div>
-              <h2 className="text-lg font-semibold text-gray-900 mt-2">
+              <h2 className="text-xl font-semibold text-gray-900 ">
                 {item.title}
               </h2>
             </div>
 
             {/* Card Learn More */}
-            <div className="p-4 ">
-              <Link
-                to={item.link || "#"}
-                className="inline-flex items-center justify-center text-black font-medium 
-                border border-black
-                 shadow-md  rounded-lg px-10 py-2 hover:bg-blue-50 transition"
-              >
-                Learn More →
-              </Link>
+            <div className="p-4">
+               <Link
+                          to="/article"
+                          className="text-blue-800 font-bold flex items-center space-x-2"
+                        >
+                          <span className=" border outline-black py-2 px-2 "> Learn More</span>
+                          <AiOutlineArrowRight className="text-xl arrow-slide" />
+                        </Link>
             </div>
           </div>
         ))}
       </div>
 
       {/* Bottom Learn More Button */}
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-10 ">
         <Link
-          to="/about"
-          className="bg-blue-600 text-white font-bold flex items-center space-x-2 py-3 px-6
-           rounded-xl shadow-md hover:bg-blue-700 transition"
-        >
-          <span>Learn More</span>
-          <AiOutlineArrowRight className="text-xl" />
-        </Link>
+                   to="/article"
+                   className="text-white font-bold flex items-center space-x-2"
+                 >
+                   <span className="bg-blue-900 text-white py-3 px-3 rounded-xl">View All Aricle</span>
+                   <AiOutlineArrowRight className="text-xl arrow-slide" />
+                 </Link>
       </div>
     </section>
   );

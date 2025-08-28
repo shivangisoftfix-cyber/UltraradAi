@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Mail, User, MessageSquare, Send } from "lucide-react";
+import { Mail, User, MessageSquare, Share2 } from "lucide-react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoIosSend } from "react-icons/io";
 
 const Contact = () => {
   // form state
@@ -20,15 +23,11 @@ const Contact = () => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     alert("✅ Message Sent!");
-
-    // reset form
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <section >
-     
-
+    <section>
       {/* Title */}
       <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
@@ -47,6 +46,7 @@ const Contact = () => {
       {/* Contact Card */}
       <div className="bg-white p-6 sm:p-10 rounded-xl shadow-lg w-full max-w-4xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          
           {/* Info Section */}
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
@@ -56,17 +56,53 @@ const Contact = () => {
               Have questions or want to discuss a project? Reach out via email.
             </p>
 
-            <div className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-gray-200 shadow-sm">
+            {/* Email Us Box */}
+            <div className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-gray-200 shadow-sm mb-6">
               <div className="p-3 rounded-lg bg-white shadow-sm text-purple-600 mr-4">
                 <Mail className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="font-medium text-gray-800">Email Us</h3>
                 <p className="text-gray-600">support@ultraradai.com</p>
-                <button className="mt-2 inline-block text-sm font-
-medium
- text-purple-600 hover:text-purple-800 transition-colors">Send a message →</button>
+                <button className="mt-2 inline-block text-sm font-medium text-purple-600 hover:text-purple-800 transition-colors">
+                  Send a message →
+                </button>
+              </div>
+            </div>
 
+            {/* Follow Us Box (styled like Email Us box) */}
+            <div className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-gray-200 shadow-sm">
+              <div className="p-3 rounded-lg bg-white shadow-sm text-purple-600 mr-4">
+                <Share2 className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="font-medium text-gray-800 mb-3">Follow Us</h3>
+                <div className="flex space-x-4">
+                  <a
+                    href="https://www.facebook.com/share/1CytXY4A1z/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-full bg-white shadow-sm text-gray-700 hover:bg-gray-100 hover:scale-105 transition"
+                  >
+                    <FaFacebookF className="text-lg" />
+                  </a>
+                  <a
+                    href="https://x.com/UltraradAI?s=09"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-full bg-white shadow-sm text-gray-700 hover:bg-gray-100 hover:scale-105 transition"
+                  >
+                    <FaXTwitter className="text-lg" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/ultraradai?igsh=MWt2Z2V6d2s2dGp5MQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-full bg-white shadow-sm text-gray-700 hover:bg-gray-100 hover:scale-105 transition"
+                  >
+                    <FaInstagram className="text-lg" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -131,12 +167,19 @@ medium
             </div>
 
             {/* Button */}
-          <button type="submit" className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-blue-600
-           hover:bg-blue-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
-            focus:ring-offset-2 transition-all duration-200 shadow-sm hover:shadow-md">
-              <span style={{transform: "none"}}>
-            
-            </span><span>Send Message</span></button>
+           <button
+  type="submit"
+  className="group w-full flex items-center justify-center gap-3 px-6 py-3 bg-blue-600
+    hover:bg-blue-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
+    focus:ring-offset-2 transition-all duration-200 shadow-sm"
+>
+  <span className="flex items-center gap-2">
+    <IoIosSend className="text-3xl transform transition-transform duration-300 
+    group-hover:-translate-y-1 active:-translate-y-1" />
+    Send Message
+  </span>
+</button>
+
           </form>
         </div>
       </div>
